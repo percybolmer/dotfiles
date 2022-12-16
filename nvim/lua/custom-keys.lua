@@ -8,6 +8,12 @@ map('n', 'n', [[:NvimTreeToggle<CR>]], {})
 -- update leader key to ,
 vim.g.mapleader = ","
 
+-- update save on keader+s
+map('n', '<C-s>', [[:w<CR>]], {})
+
+-- folding shortcuts
+map('n', '<Leader>l', [[zc]], {})
+map('n', '<Leader>k', [[zo]], {})
 -- Open git terminal
 map('n', '<Leader>g', [[:FloatermNew lazygit<CR>]], {})
 -- nvim-dap keymappings
@@ -31,4 +37,8 @@ map('n', '<F6>', [[:lua require'dap'.repl.open()<CR>]], {})
 map('n', 'dl', [[:lua require'dap'.run_last()<CR>]], {})
 -- Press d to toggle debug mode, will remove NvimTree also
 map('n', '<C-d>', [[:NvimTreeToggle<CR> :lua require'dapui'.toggle()<CR>]], {})
+-- Floatterm Settings
+map('n', "<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ", {})
+map('n', "t", ":FloatermToggle myfloat<CR>",{})
+map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 

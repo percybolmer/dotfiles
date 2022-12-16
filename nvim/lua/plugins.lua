@@ -60,4 +60,12 @@ return require('packer').startup(function(use)
 	use "lukas-reineke/indent-blankline.nvim"
 	-- Floatterm to run lazygit
 	use 'voldikss/vim-floaterm'
+	-- Linter
+	use 'mfussenegger/nvim-lint'
+
+	-- Rust
+	use 'simrat39/rust-tools.nvim'
+
+	-- Trouble (VSCODE error bar)
+	use 'folke/trouble.nvim'
 end)

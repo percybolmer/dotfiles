@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "go", "lua", "rust" },
+  ensure_installed = { "go", "lua", "rust", "toml" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -13,6 +13,16 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
-
+    ident = { enable = true },
+    rainbow = {
+	enable = true,
+	extended_mode = true,
+	max_file_lines = nil,
+    }
   },
 }
+
+-- Attach tree sitter folding to neovim
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+
