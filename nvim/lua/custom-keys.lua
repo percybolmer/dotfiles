@@ -18,6 +18,7 @@ map('n', '<Leader>o', [[:TagbarToggle<CR>]], {})
 -- folding shortcuts
 map('n', '<Leader>l', [[zc]], {})
 map('n', '<Leader>k', [[zo]], {})
+map('n', '<Leader>ö', [[zR]], {})
 -- Open git terminal
 map('n', '<Leader>g', [[:FloatermNew lazygit<CR>]], {})
 -- nvim-dap keymappings

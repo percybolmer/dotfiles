@@ -20,7 +20,11 @@
       },
     },
   }
-
+-- Svelte
+lspconfig.svelte.setup{}
+lspconfig.eslint.setup{}
+lspconfig.tailwindcss.setup{}
+lspconfig.cssls.setup{}
   -- rust
   -- LSP Diagnostics Options Setup 
 local sign = function(opts)
