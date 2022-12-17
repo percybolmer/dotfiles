@@ -11,6 +11,9 @@ vim.g.mapleader = ","
 -- update save on keader+s
 map('n', '<C-s>', [[:w<CR>]], {})
 
+-- Trouble tab bar key
+map('n', '<Leader>t', [[:TroubleToggle<CR>]], {})
+
 -- folding shortcuts
 map('n', '<Leader>l', [[zc]], {})
 map('n', '<Leader>k', [[zo]], {})

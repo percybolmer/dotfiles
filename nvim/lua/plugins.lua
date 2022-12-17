@@ -68,4 +68,13 @@ return require('packer').startup(function(use)
 
 	-- Trouble (VSCODE error bar)
 	use 'folke/trouble.nvim'
+
+	-- TODO comments
+	use {
+	  "folke/todo-comments.nvim",
+	  requires = "nvim-lua/plenary.nvim",
+	}
+
+	-- Tag bar for quick nav in large files
+	use 'preservim/tagbar'	
 end)
