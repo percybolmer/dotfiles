@@ -13,7 +13,8 @@ map('n', '<C-s>', [[:w<CR>]], {})
 
 -- Trouble tab bar key
 map('n', '<Leader>t', [[:TroubleToggle<CR>]], {})
-
+-- Tagbar Toggle to see code structure
+map('n', '<Leader>o', [[:TagbarToggle<CR>]], {})
 -- folding shortcuts
 map('n', '<Leader>l', [[zc]], {})
 map('n', '<Leader>k', [[zo]], {})
