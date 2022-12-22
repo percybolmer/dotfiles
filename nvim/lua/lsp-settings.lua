@@ -24,6 +24,7 @@
 lspconfig.svelte.setup{}
 lspconfig.eslint.setup{}
 lspconfig.tailwindcss.setup{}
+lspconfig.marksman.setup{}
 lspconfig.cssls.setup{}
   -- rust
   -- LSP Diagnostics Options Setup 

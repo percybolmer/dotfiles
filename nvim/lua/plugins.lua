@@ -20,8 +20,9 @@ return require('packer').startup(function(use)
 	use 'mfussenegger/nvim-dap'
 	-- UI for DAP
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-	-- Dracula theme for styling
+	-- themes for styling
 	use 'Mofiqul/dracula.nvim'
+	use 'folke/tokyonight.nvim'
 	-- Treesitter
 	use {
 		-- recommended packer way of installing it is to run this function, copied from documentation
