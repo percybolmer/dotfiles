@@ -43,7 +43,9 @@ map('n', 'dl', [[:lua require'dap'.run_last()<CR>]], {})
 -- Press d to toggle debug mode, will remove NvimTree also
 map('n', '<C-d>', [[:NvimTreeToggle<CR> :lua require'dapui'.toggle()<CR>]], {})
 -- Floatterm Settings
-map('n', "<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ", {})
+map('n', "<leader>fnt", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ", {})
 map('n', "t", ":FloatermToggle myfloat<CR>",{})
 map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
+-- Show ToDOS
+map('n', "<leader>ft", ":TodoTelescope<CR>", {})
