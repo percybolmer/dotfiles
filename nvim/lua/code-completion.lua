@@ -16,6 +16,7 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 local cmp = require'cmp'
+
 cmp.setup({ 
   -- Required by vsnip
   snippet = {
@@ -48,11 +49,11 @@ cmp.setup({
   -- sources are the installed sources that can be used for code suggestions
   sources = {
       { name = 'path' },
-      { name = 'nvim_lsp', keyword_length = 3 },
+      { name = 'nvim_lsp' },
       { name = 'nvim_lsp_signature_help'}, 
-      { name = 'nvim_lua', keyword_length = 2},
-      { name = 'buffer', keyword_length = 2 },
-      { name = 'vsnip', keyword_length = 2 },
+      { name = 'nvim_lua'},
+      { name = 'buffer'},
+      { name = 'vsnip' },
   },
   -- Add borders to the windows
    window = {
@@ -74,3 +75,4 @@ cmp.setup({
       end,
   },
 })
+

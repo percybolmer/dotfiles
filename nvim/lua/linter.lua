@@ -1,16 +1,16 @@
   local lint = require('lint')
-  lint.linters.cargo = {
-    cmd = 'cargo check',
-    stdin = true,
-    args = {},
-    stream = 'both',
-    ignore_exitcode = false,
-    env = nil,
-  }
+  --lint.linters.cargo = {
+  --  cmd = 'cargo check',
+  --  stdin = true,
+  --  args = {},
+  --  stream = 'both',
+  --  ignore_exitcode = false,
+  --  env = nil,
+  --}
   -- Add Linter by File type
   lint.linters_by_ft = {
     go = {'golangcilint', 'revive'},
-    rust = {'cargo'},
+    --rust = {'cargo'},
   }
   -- Get golangcilint to configure it
   local golangcilint = require("lint.linters.golangcilint")
