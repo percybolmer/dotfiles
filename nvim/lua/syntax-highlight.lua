@@ -23,6 +23,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- Attach tree sitter folding to neovim
+vim.opt.foldenable = false
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
