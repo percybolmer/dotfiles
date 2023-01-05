@@ -20,6 +20,8 @@
       },
     },
   }
+
+lspconfig.rust_analyzer.setup{}
 -- Svelte
 lspconfig.svelte.setup{}
 lspconfig.eslint.setup{}
