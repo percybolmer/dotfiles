@@ -42,7 +42,7 @@ cmp.setup({
     -- We set the ConfirmBehavior to insert the Selected suggestion
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
+      -- select = true,
     })
 },
 
