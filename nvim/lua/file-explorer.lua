@@ -9,4 +9,11 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup({
   open_on_setup = true,
   ignore_buffer_on_setup = true,
+  highlight_focused_file = true,
+  update_focused_file = {
+        enable      = true,
+        update_cwd  = false,
+        ignore_list = {}
+    }
+
 })
