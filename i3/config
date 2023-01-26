@@ -186,12 +186,16 @@ bindsym $mod+r mode "resize"
 #}
 
 ### i3-gaps
-#gaps inner 10
-#smart_borders on
+# Available in 4.22
+gaps inner 15
+gaps outer 5
+# Smart gaps makes gaps only appear when there is 1 or more window open
+# smart_gaps on
 
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 ##  Screenshots in files
 bindsym Print exec --no-startup-id maim --format=png "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
 bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"

@@ -3,4 +3,5 @@
 !i3
 !nvim
 !polybar
+!README.md
 nvim/plugin/packer_compiled.lua

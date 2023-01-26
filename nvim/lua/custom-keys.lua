@@ -49,3 +49,7 @@ map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
 -- Show ToDOS
 map('n', "<leader>ft", ":TodoTelescope<CR>", {})
+
+-- Move up and down
+map('n', '<A-k>', ":m .-2<CR>", {})
+map('n', '<A-j>', ":m .+1<CR>", {})

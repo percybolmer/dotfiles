@@ -65,9 +65,13 @@ return require('packer').startup(function(use)
 
 	-- LSP Saga
 	use({
-    	"glepnir/lspsaga.nvim",
-    	branch = "main",
+	    "glepnir/lspsaga.nvim",
+	    branch = "main",
+	    config = function()
+	        require('lspsaga').setup({})
+	    end,
 	})
+
 	-- Indent guide
 	use "lukas-reineke/indent-blankline.nvim"
 	-- Floatterm to run lazygit
@@ -87,6 +91,15 @@ return require('packer').startup(function(use)
 	  requires = "nvim-lua/plenary.nvim",
 	}
 
+	-- Transparency without hassle
+	use({
+	  "xiyaowong/nvim-transparent",
+	  config = function()
+	    require("transparent").setup {
+	      enable = true,
+	    }
+	  end
+	})
 	-- Tag bar for quick nav in large files
 	use 'preservim/tagbar'	
 end)
