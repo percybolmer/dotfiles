@@ -100,6 +100,12 @@ return require('packer').startup(function(use)
 	    }
 	  end
 	})
+	use {
+	  'VonHeikemen/searchbox.nvim',
+	  requires = {
+	    {'MunifTanjim/nui.nvim'}
+	  }
+	}
 	-- Tag bar for quick nav in large files
 	use 'preservim/tagbar'	
 end)

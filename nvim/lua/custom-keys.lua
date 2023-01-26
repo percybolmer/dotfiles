@@ -53,3 +53,6 @@ map('n', "<leader>ft", ":TodoTelescope<CR>", {})
 -- Move up and down
 map('n', '<A-k>', ":m .-2<CR>", {})
 map('n', '<A-j>', ":m .+1<CR>", {})
+
+-- Find and Replace
+map('n', '<leader>s', ':SearchBoxReplace<CR>', {})

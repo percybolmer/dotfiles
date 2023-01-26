@@ -1,6 +1,5 @@
 # Dot Files
 These are my dot files
-
 ## Requirements
 
 Polybar
