@@ -100,6 +100,7 @@ return require('packer').startup(function(use)
 	    }
 	  end
 	})
+	-- Search bar cheat to avoid typing %s;;g
 	use {
 	  'VonHeikemen/searchbox.nvim',
 	  requires = {
@@ -107,5 +108,9 @@ return require('packer').startup(function(use)
 	  }
 	}
 	-- Tag bar for quick nav in large files
-	use 'preservim/tagbar'	
+	use 'preservim/tagbar'
+	use {
+	  'lewis6991/gitsigns.nvim',
+	  -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+	}
 end)
