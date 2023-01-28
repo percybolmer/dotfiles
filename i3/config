@@ -193,6 +193,8 @@ gaps outer 5
 # smart_gaps on
 
 
+# Picom for transparent terminal 
+exec_always --no-startup-id picom -CGb
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
