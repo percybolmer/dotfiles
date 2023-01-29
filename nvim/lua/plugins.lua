@@ -63,15 +63,6 @@ return require('packer').startup(function(use)
 	-- using packer.nvim
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
-	-- LSP Saga
-	use({
-	    "glepnir/lspsaga.nvim",
-	    branch = "main",
-	    config = function()
-	        require('lspsaga').setup({})
-	    end,
-	})
-
 	-- Indent guide
 	use "lukas-reineke/indent-blankline.nvim"
 	-- Floatterm to run lazygit
@@ -100,13 +91,6 @@ return require('packer').startup(function(use)
 	    }
 	  end
 	})
-	-- Search bar cheat to avoid typing %s;;g
-	use {
-	  'VonHeikemen/searchbox.nvim',
-	  requires = {
-	    {'MunifTanjim/nui.nvim'}
-	  }
-	}
 	-- Tag bar for quick nav in large files
 	use 'preservim/tagbar'
 	use {

@@ -10,7 +10,6 @@ vim.g.mapleader = ","
 -- update save on keader+s
 map('n', '<C-s>', [[:w<CR>]], {})
 map('i', '<C-s>', [[<ESC>:w<CR>]], {})
-
 -- Trouble tab bar key
 map('n', '<Leader>t', [[:TroubleToggle<CR>]], {})
 -- Tagbar Toggle to see code structure

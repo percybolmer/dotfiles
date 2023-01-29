@@ -185,6 +185,9 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
+# Application Settings 
+for_window [class="peek|nitrogen" instance="floating"] floating enable
+
 ### i3-gaps
 # Available in 4.22
 gaps inner 15
@@ -207,3 +210,13 @@ bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER
 bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+
+# Gif Maker
+bindsym Ctrl+g+Print exec -name 'floating' peek
+
+## Make workspaces upon on default 
+#assign ["class=Brave"] $ws1
+
+# Start brave
+#exec --no-startup-id i3-msg 'workspace 1; exec /snap/bin/brave'
+
