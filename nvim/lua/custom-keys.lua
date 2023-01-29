@@ -47,8 +47,8 @@ map('n', "t", ":FloatermToggle myfloat<CR>",{})
 map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
 -- Bufferline
-map('n', "<A-m>", ":BufferlineCycleNext<CR>", {})
-map('n', "<A-n>", ":BufferlineCyclePrev<CR>", {})
+map('n', "<A-m>", ":BufferLineCycleNext<CR>", {})
+map('n', "<A-n>", ":BufferLineCyclePrev<CR>", {})
 
 -- Show ToDOS
 map('n', "<leader>ft", ":TodoTelescope<CR>", {})
