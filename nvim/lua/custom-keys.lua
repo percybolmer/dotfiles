@@ -48,7 +48,7 @@ map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
 -- Bufferline
 map('n', "<A-m>", ":BufferlineCycleNext<CR>", {})
-map('n', "<A-n>", ":BufferlineCyclePrevious<CR>", {})
+map('n', "<A-n>", ":BufferlineCyclePrev<CR>", {})
 
 -- Show ToDOS
 map('n', "<leader>ft", ":TodoTelescope<CR>", {})
