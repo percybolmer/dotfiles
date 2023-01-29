@@ -81,6 +81,18 @@ return require('packer').startup(function(use)
 	  "folke/todo-comments.nvim",
 	  requires = "nvim-lua/plenary.nvim",
 	}
+	-- Session to remember opened files and position in projects
+	use {
+	  'rmagatti/auto-session',
+	  config = function()
+	    require("auto-session").setup {
+		log_level = "error",
+		auto_session_enabled = true,
+		auto_restore_enabled = true,
+		auto_save_enabled = true,
+	    }
+	  end
+	}
 
 	-- Transparency without hassle
 	use({

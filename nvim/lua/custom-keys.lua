@@ -24,11 +24,11 @@ map('n', '<Leader>g', [[:FloatermNew lazygit<CR>]], {})
 -- Press f5 to debug
 map('n', '<F5>', [[:lua require'dap'.continue()<CR>]], {})
 -- Press CTRL + b to toggle regular breakpoint
-map('n', '<C-b>', [[:lua require'dap'.toggle_breakpoint()<CR>]], {})
+map('n', '<A-b>', [[:lua require'dap'.toggle_breakpoint()<CR>]], {})
 -- Press CTRL + c to toggle Breakpoint with Condition
-map('n', '<C-c>', [[:lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<CR>]], {})
+map('n', '<A-c>', [[:lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<CR>]], {})
 -- Press CTRL + l to toggle Logpoint
-map('n', '<C-l>', [[:lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>]], {})
+map('n', '<A-l>', [[:lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>]], {})
 -- Pressing F10 to step over
 map('n', '<F10>', [[:lua require'dap'.step_over()<CR>]], {})
 -- Pressing F11 to step into
@@ -40,11 +40,15 @@ map('n', '<F6>', [[:lua require'dap'.repl.open()<CR>]], {})
 -- Press dl to run last ran configuration (if you used f5 before it will re run it etc)
 map('n', 'dl', [[:lua require'dap'.run_last()<CR>]], {})
 -- Press d to toggle debug mode, will remove NvimTree also
-map('n', '<C-d>', [[:NvimTreeToggle<CR> :lua require'dapui'.toggle()<CR>]], {})
+map('n', '<A-d>', [[:NvimTreeToggle<CR> :lua require'dapui'.toggle()<CR>]], {})
 -- Floatterm Settings
 map('n', "<leader>fnt", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ", {})
 map('n', "t", ":FloatermToggle myfloat<CR>",{})
 map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
+
+-- Bufferline
+map('n', "<A-m>", ":BufferlineCycleNext<CR>", {})
+map('n', "<A-n>", ":BufferlineCyclePrevious<CR>", {})
 
 -- Show ToDOS
 map('n', "<leader>ft", ":TodoTelescope<CR>", {})
