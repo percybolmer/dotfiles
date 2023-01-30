@@ -4,7 +4,7 @@ local map = vim.api.nvim_set_keymap
 -- leave insert mode with jk
 map('i', 'jk', '', {})
 -- map the key n to run the command :NvimTreeToggle
-map('n', 'n', [[:NvimTreeToggle<CR>]], {})
+map('n', 'A-t', [[:NvimTreeToggle<CR>]], {})
 -- update leader key to ,
 vim.g.mapleader = ","
 -- update save on keader+s
