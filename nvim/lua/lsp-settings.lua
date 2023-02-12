@@ -6,7 +6,7 @@ local function on_attach(client, buffer)
     local keymap_opts = { buffer = buffer }
     -- Code navigation and shortcuts
     vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
+    vim.keymap.set("n", "gK", vim.lsp.buf.hover, keymap_opts)
     vim.keymap.set("n", "gD", vim.lsp.buf.implementation, keymap_opts)
     vim.keymap.set("n", "<c-k>", vim.lsp.buf.signature_help, keymap_opts)
     vim.keymap.set("n", "1gD", vim.lsp.buf.type_definition, keymap_opts)
@@ -97,6 +97,7 @@ require("rust-tools").setup(opts)
 lspconfig.gopls.setup {
     cmd = {"gopls", "serve"},
     filetypes = {"go", "gomod"},
+    on_attach = on_attach,
     root_dir = util.root_pattern("go.work", "go.mod", ".git"),
     settings = {
       gopls = {

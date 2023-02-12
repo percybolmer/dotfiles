@@ -4,7 +4,7 @@ local map = vim.api.nvim_set_keymap
 -- leave insert mode with jk
 map('i', 'jk', '', {})
 -- map the key n to run the command :NvimTreeToggle
-map('n', 'A-t', [[:NvimTreeToggle<CR>]], {})
+map('n', '<A-t>', [[:NvimTreeToggle<CR>]], {})
 -- update leader key to ,
 vim.g.mapleader = ","
 -- update save on keader+s
@@ -40,10 +40,10 @@ map('n', '<F6>', [[:lua require'dap'.repl.open()<CR>]], {})
 -- Press dl to run last ran configuration (if you used f5 before it will re run it etc)
 map('n', 'dl', [[:lua require'dap'.run_last()<CR>]], {})
 -- Press d to toggle debug mode, will remove NvimTree also
-map('n', '<A-d>', [[:NvimTreeToggle<CR> :lua require'dapui'.toggle()<CR>]], {})
+map('n', '<A-d>', [[:lua require'dapui'.toggle()<CR>]], {})
 -- Floatterm Settings
 map('n', "<leader>fnt", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ", {})
-map('n', "t", ":FloatermToggle myfloat<CR>",{})
+map('n', "<leader>t", ":FloatermToggle myfloat<CR>",{})
 map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
 -- Bufferline
@@ -57,5 +57,3 @@ map('n', "<leader>ft", ":TodoTelescope<CR>", {})
 map('n', '<A-k>', ":m .-2<CR>", {})
 map('n', '<A-j>', ":m .+1<CR>", {})
 
--- Find and Replace
-map('n', '<leader>s', ':SearchBoxReplace<CR>', {})
