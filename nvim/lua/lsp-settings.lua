@@ -105,7 +105,6 @@ lspconfig.gopls.setup {
 	  nilness = true,
 	  unusedparams = true,
 	  usenay = true,
-          unusedparams = true,
         },
         staticcheck = true,
 	gofumpt = true,
@@ -121,6 +120,13 @@ lspconfig.svelte.setup({
 	on_attach = on_attach,
 	
 	-- flags = lsp_flags,
+})
+-- deprecated
+--lspconfig.sumneko_lua.setup({
+--	on_attach = on_attach,
+--})
+lspconfig.tsserver.setup({
+	on_attach = on_attach,
 })
 lspconfig.tsserver.setup({
 	on_attach = on_attach,
@@ -148,3 +154,44 @@ lspconfig.cssls.setup({
   -- rust
 
 
+lspconfig.dockerls.setup({
+	on_attach = on_attach,
+})
+lspconfig.intelephense.setup({
+	on_attach = on_attach,
+})
+lspconfig.eslint.setup({
+	on_attach = on_attach,
+	
+	-- flags = lsp_flags,
+})
+lspconfig.tailwindcss.setup({
+	on_attach = on_attach,
+	
+	-- flags = lsp_flags,
+})
+lspconfig.marksman.setup({
+	on_attach = on_attach,
+	
+	-- flags = lsp_flags,
+})
+lspconfig.cssls.setup({
+	on_attach = on_attach,
+	
+	-- flags = lsp_flags,
+})
+lspconfig.yamlls.setup({
+	settings = {
+		yaml = {
+			schemas = { kubernetes = "globPattern" }
+		}
+	}
+})
+lspconfig.intelephense.setup({
+	on_attach = on_attach,
+	settings = {
+		intelephense = {
+			environment = { phpVersion = "5.6.40"},
+		},
+	}
+})

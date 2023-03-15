@@ -24,6 +24,17 @@ return require('packer').startup(function(use)
       			}
     		}
   	}
+	-- vim-dadbod is for database handeling and ui --
+	use 'tpope/vim-dadbod'
+	use 'tpope/vim-dotenv'
+	use 'kristijanhusak/vim-dadbod-completion'
+	use 'kristijanhusak/vim-dadbod-ui'
+	
+	-- Harpoon for file navigation --
+	use {
+		'ThePrimeagen/harpoon',
+		requires = "nvim-lua/plenary.nvim"
+	}
 	-- File explorer tree
     	use 'nvim-tree/nvim-web-devicons' -- optional, for file icons
 	use 'nvim-tree/nvim-tree.lua'
@@ -44,6 +55,7 @@ return require('packer').startup(function(use)
         	end,
 
 	}
+	use 'nvim-lua/plenary.nvim'
 	-- Telescope used to fuzzy search files
 	use {
   		'nvim-telescope/telescope.nvim', tag = '0.1.0',

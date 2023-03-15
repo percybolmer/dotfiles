@@ -219,4 +219,9 @@ bindsym Ctrl+g+Print exec -name 'floating' peek
 
 # Start brave
 #exec --no-startup-id i3-msg 'workspace 1; exec /snap/bin/brave'
-
+# Move window
+bindsym $mod+m move workspace to output left
+# Logout 
+bindsym Ctrl+Shift+l exec i3lock --color 000000
+# Bg image
+exec_always feh --bg-scale /home/percy/Pictures/wallpaper/istockphoto-1341437653-170667a.jpg

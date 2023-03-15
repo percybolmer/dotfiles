@@ -41,6 +41,7 @@ alert = #bd2c40
 
 
 [bar/main]
+monitor = ${env:MONITOR:}
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
@@ -67,10 +68,9 @@ module-margin-right = 1
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=12;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:pixelsize=12;2
-
+font-3 = Font Awesome 6 Free:pixelsize=12;2
+font-4 = Font Awesome 6 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 6 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow spotify
@@ -105,7 +105,7 @@ type = custom/script
 interval = 1
 format-prefix = "  "
 format = <label>
-exec = python /home/pp/.config/polybar/spotify.py -f '{artist}: {song}'
+exec = python3 /home/percy/.config/polybar/spotify.py -f '{artist}: {song}'
 format-underline = #1db954
 ;control players (optional)
 click-left = playerctl --player=spotify play-pause 

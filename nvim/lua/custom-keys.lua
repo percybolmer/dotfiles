@@ -4,7 +4,7 @@ local map = vim.api.nvim_set_keymap
 -- leave insert mode with jk
 map('i', 'jk', '', {})
 -- map the key n to run the command :NvimTreeToggle
-map('n', '<A-t>', [[:NvimTreeToggle<CR>]], {})
+map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 -- update leader key to ,
 vim.g.mapleader = ","
 -- update save on keader+s
@@ -46,9 +46,6 @@ map('n', "<leader>fnt", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --
 map('n', "<leader>t", ":FloatermToggle myfloat<CR>",{})
 map('t', "<Esc>", "<C-\\><C-n>:q<CR>",{})
 
--- Bufferline
-map('n', "<A-m>", ":BufferLineCycleNext<CR>", {})
-map('n', "<A-n>", ":BufferLineCyclePrev<CR>", {})
 
 -- Show ToDOS
 map('n', "<leader>ft", ":TodoTelescope<CR>", {})
@@ -56,4 +53,22 @@ map('n', "<leader>ft", ":TodoTelescope<CR>", {})
 -- Move up and down
 map('n', '<A-k>', ":m .-2<CR>", {})
 map('n', '<A-j>', ":m .+1<CR>", {})
+map('v', '<A-k>', ":m '<-2<CR>gv=gv", {})
+map('v', '<A-j>', ":m '>+1<CR>gv=gv", {})
+map('i', '<A-k>', "<Esc> :m .-2<CR>==gi", {})
+map('i', '<A-j>', "<Esc> :m .+1<CR>==gi", {})
+-- DB related and DBUI
+map('n', '<leader>db', "[[:DBUI<CR>:vertical resize 80<CR>]]", {})
+map('n', '<leader>dn', "[[:FloatermNew --name=db :DBUI<CR>]]", {})
 
+
+-- Harpoon to quick navigate between files
+map('n', '<leader>m', [[:lua require'harpoon.mark'.add_file()<CR>]], {})
+map('n', '<leader>mm', [[:lua require'harpoon.mark'.rm_file()<CR>]], {})
+map('n', '<leader>s', [[:lua require'harpoon.ui'.toggle_quick_menu()<CR>]], {})
+map('n', '1', [[:lua require'harpoon.ui'.nav_file(1)<CR>]], {})
+map('n', '2', [[:lua require'harpoon.ui'.nav_file(2)<CR>]], {})
+map('n', '3', [[:lua require'harpoon.ui'.nav_file(3)<CR>]], {})
+map('n', '4', [[:lua require'harpoon.ui'.nav_file(4)<CR>]], {})
+map('n', '5', [[:lua require'harpoon.ui'.nav_file(5)<CR>]], {})
+map('n', '6', [[:lua require'harpoon.ui'.nav_file(6)<CR>]], {})
