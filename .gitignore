@@ -1,7 +1,2 @@
-*
-!.gitignore
-!i3
-!nvim
-!polybar
-!README.md
+.gitignore
 nvim/plugin/packer_compiled.lua
